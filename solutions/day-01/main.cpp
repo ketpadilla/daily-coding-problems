@@ -13,26 +13,45 @@ using namespace std;
 
 int main() {
   string input;
-  vector<int> arrNum;
-  int k, element; 
+  int k, element, first, second;
+  vector<int> list; 
   bool isSum = false;
 
+  system("clear");
   cout << "ENTER LIST OF NUMBERS" << endl // ask list
     << "(Separate with spaces and press enter to end)" << endl
     << ":: ";
-  
+  getline(cin, input);
+
   stringstream s(input);
   while (s >> element) {
-    //! process input
+    if (element == 0) break;
+    list.push_back(element);
   }
-
-  cout << "ENTER k" << endl
+  
+  cout << endl 
+    << "ENTER k" << endl
     << ":: ";
   cin >> k;
 
-  //! return true or false
+  int len = list.size();
+  for (int i = 0; i < len; i++) {
+    for (int j = 0; j < len; j++) {
+      if (list[i] + list[j] == k) {
+        first = list[i];
+        second = list[j];
+        isSum = true;
+        break;
+      }
+    }
+  }
 
-  cout << "Can any of the elements in the list add up to " << k << "? "
-    << isSum << endl;
+  //! return true or false
+  
+  cout << endl 
+    << "Can any of the elements in the list add up to " 
+    << k << "?" << endl
+    << ((isSum) ? "Yes" : "No") << " -> "
+    << ((isSum) ? to_string(first) + " + " + to_string(second) + " = " + to_string(first + second) : "") << endl;
   return 0;
 }
