@@ -68,7 +68,8 @@ int main() {
 
   ! Explanation
   * MAIN FUNCTION: logic involving cumulation with exclusion of indices 
-
+    - excludes the element of the current index from calculations
+  
   list[len, 1] -> creates a vector named "listt" with:
     * 'len' number of elements
     * all elements have a value of '1'
@@ -80,7 +81,7 @@ int main() {
     • until the last index (len - 1), do the following:
       1. access the previous element (idx - 1) of the prefix vector AND original list
       2. perform required calculation
-      3. increment
+      3. increment 
 
   * suffix logic:
     • start at the second to the last index
