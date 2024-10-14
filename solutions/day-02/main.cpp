@@ -69,7 +69,8 @@ int main() {
   ! Explanation
   * MAIN FUNCTION: logic involving cumulation with exclusion of indices 
     - excludes the element of the current index from calculations
-  
+    - can be used to exclude any 'n'th element of the array by adjusting how elements are called relative to the current index 'i'
+    
   list[len, 1] -> creates a vector named "listt" with:
     * 'len' number of elements
     * all elements have a value of '1'
