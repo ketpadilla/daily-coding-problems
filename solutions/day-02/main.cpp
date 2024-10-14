@@ -66,4 +66,30 @@ int main() {
     curr = 1;
   }
 
+  ! Explanation
+  * MAIN FUNCTION: logic involving cumulation with exclusion of indices 
+
+  list[len, 1] -> creates a vector named "listt" with:
+    * 'len' number of elements
+    * all elements have a value of '1'
+      -> use '0' if addition and subtractino
+    • create vectors for prefix and suffix calculations
+
+  * prefix logic:
+    • start at the second index
+    • until the last index (len - 1), do the following:
+      1. access the previous element (idx - 1) of the prefix vector AND original list
+      2. perform required calculation
+      3. increment
+
+  * suffix logic:
+    • start at the second to the last index
+    • until the first index (0), do the following:
+      1. access the succeeding element (idx + 1) of the prefix vector AND original list
+      2. perform required calculation
+      3. decrement
+
+  * supplementary: 
+    https://www.perplexity.ai/search/only-tell-me-what-is-wrong-int-tG78afPVQ8Gxo5c5kv0GWA
+  
 */
